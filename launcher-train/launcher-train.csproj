@@ -4,7 +4,7 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{0BA03269-A66F-445F-A7B1-DF2B94A1F126}</ProjectGuid>
+        <ProjectGuid>{C457E628-CEC0-4C94-88D8-916016710282}</ProjectGuid>
         <OutputType>WinExe</OutputType>
         <RootNamespace>launcher_train</RootNamespace>
         <AssemblyName>launcher_train</AssemblyName>
@@ -54,8 +54,9 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
-        <Compile Include="windowmain.xaml.cs">
-          <DependentUpon>windowmain.xaml</DependentUpon>
+        <Compile Include="View\Main.xaml.cs">
+          <DependentUpon>Main.xaml</DependentUpon>
+          <SubType>Code</SubType>
         </Compile>
     </ItemGroup>
     <ItemGroup>
@@ -76,7 +77,10 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
-      <Page Include="windowmain.xaml" />
+      <Page Include="View\Main.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <SubType>Designer</SubType>
+      </Page>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
