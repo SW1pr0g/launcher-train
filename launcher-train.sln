@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "launcher-train", "launcher-train\launcher-train.csproj", "{0BA03269-A66F-445F-A7B1-DF2B94A1F126}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BA03269-A66F-445F-A7B1-DF2B94A1F126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BA03269-A66F-445F-A7B1-DF2B94A1F126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BA03269-A66F-445F-A7B1-DF2B94A1F126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BA03269-A66F-445F-A7B1-DF2B94A1F126}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
