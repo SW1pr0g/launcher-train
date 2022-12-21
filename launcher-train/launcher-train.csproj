@@ -54,6 +54,9 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Compile Include="View\LoginView.xaml.cs">
+          <DependentUpon>LoginView.xaml</DependentUpon>
+        </Compile>
         <Compile Include="View\Main.xaml.cs">
           <DependentUpon>Main.xaml</DependentUpon>
         </Compile>
@@ -76,6 +79,7 @@
         <None Include="App.config" />
     </ItemGroup>
     <ItemGroup>
+      <Page Include="View\LoginView.xaml" />
       <Page Include="View\Main.xaml" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
