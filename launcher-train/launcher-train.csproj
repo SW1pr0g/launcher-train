@@ -82,5 +82,10 @@
       <Page Include="View\LoginView.xaml" />
       <Page Include="View\Main.xaml" />
     </ItemGroup>
+    <ItemGroup>
+      <Resource Include="Images\Login-back.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
