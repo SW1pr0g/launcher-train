@@ -7,11 +7,36 @@
         mc:Ignorable="d"
         Title="LoginView" Height="550" Width="800"
         WindowStyle="None"
-        ResizeMode="NoResize"
+        ResizeMode="CanResizeWithGrip"
         WindowStartupLocation="CenterScreen"
-        Background="Transparent"
+        Background="Transparent" Icon="/Images/icon.ico"
         AllowsTransparency="True"
-        MouseDown="LoginView_OnMouseDown">
+        MouseDown="LoginView_OnMouseDown"
+        Closing="LoginView_Closing">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="MinimizeBtn">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="Montserrat"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="#28AEED"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#278BEF"/>
+                </Trigger>
+            </Style.Triggers>            
+        </Style>
+        <Style TargetType="Button" x:Key="CloseBtn" BasedOn="{StaticResource MinimizeBtn}">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Background" Value="#DA34AE"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#C62DAE"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Border CornerRadius="12">
         <Border.Background>
             <ImageBrush ImageSource="/Images/Login-back.jpg"
@@ -52,27 +77,13 @@
                                Grid.Column="0"
                                VerticalAlignment="Center"
                                Margin="10,0,0,0"/>
-                    <Button x:Name="BtnMinimize"                           
-                            BorderThickness="0"
+                    <Button x:Name="BtnMinimize"
+                            Style="{StaticResource MinimizeBtn}"
                             Content="-"
-                            Foreground="White"
-                            FontSize="16"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"
                             Grid.Column="1"
                             Click="BtnMinimize_OnClick">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#28AEED"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#278BEF"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
                         <Button.Template>
-                            <ControlTemplate TargetType="Button">
+                            <ControlTemplate TargetType="Button" >
                                 <Border Width="18" Height="18"
                                         CornerRadius="9"
                                         Background="{TemplateBinding Background}">
@@ -82,25 +93,11 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                    <Button x:Name="BtnClose"                          
-                            BorderThickness="0"
+                    <Button x:Name="BtnClose"   
+                            Style="{StaticResource CloseBtn}"
                             Content="X"
-                            Foreground="White"
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"
                             Grid.Column="2"
                             Click="BtnClose_OnClick">
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#DA34AE"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#C62DAE"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border Width="18" Height="18"
